@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ankieta o sporcie</title>
+</head>
+<body>
+    <h1>Ankieta o sporcie</h1>
+    <form action="mailto:mkryniew@ids.gda.pl" method="post">
+        <label for="opinia">Jakie są Twoje uwagi na temat sportu?</label><br>
+        <textarea id="opinia" name="opinia" rows="4" cols="50"></textarea><br><br>
+
+        <label>Wybierz ulubiony rodzaj sportu:</label><br>
+        <input type="radio" name="ulubionySport" value="Piłka nożna" checked> Piłka nożna
+        <input type="radio" name="ulubionySport" value="Koszykówka"> Koszykówka
+        <input type="radio" name="ulubionySport" value="Siatkówka"> Siatkówka
+        <input type="radio" name="ulubionySport" value="Tenis"> Tenis<br><br>
+     
+        <label>Wybierz, czy preferujesz gry drużynowe:</label><br>
+        <input type="radio" name="gryDruzynowe" value="Tak"> Tak<br>
+        <input type="radio" name="gryDruzynowe" value="Nie"> Nie<br>
+        <input type="radio" name="gryDruzynowe" value="Czasami"> Czasami<br><br>
+ 
+        <label>Wybierz swój poziom aktywności sportowej:</label><br>
+        <input type="radio" name="poziomAktywnosci" value="Początkujący" checked> Początkujący
+        <input type="radio" name="poziomAktywnosci" value="Średniozaawansowany"> Średniozaawansowany
+        <input type="radio" name="poziomAktywnosci" value="Zaawansowany"> Zaawansowany
+        <input type="radio" name="poziomAktywnosci" value="Ekspert"> Ekspert
+        <input type="radio" name="poziomAktywnosci" value="Nie jestem aktywny/a"> Nie jestem aktywny/a<br><br>
+
+        <label>Wybierz, które dyscypliny sportu uprawiasz:</label><br>
+        <input type="checkbox" name="dyscypliny" value="Bieganie"> Bieganie<br>
+        <input type="checkbox" name="dyscypliny" value="Pływanie"> Pływanie<br>
+        <input type="checkbox" name="dyscypliny" value="Jazda na rowerze"> Jazda na rowerze<br>
+        <input type="checkbox" name="dyscypliny" value="Gimnastyka"> Gimnastyka<br><br>
+      
+        <label>Czy uczestniczysz w zawodach sportowych?</label><br>
+        <input type="checkbox" name="uczestnictwo" value="Tak" checked> Tak<br>
+        <input type="checkbox" name="uczestnictwo" value="Nie"> Nie<br>
+        <input type="checkbox" name="uczestnictwo" value="Czasami"> Czasami<br>
+        <input type="checkbox" name="uczestnictwo" value="Nie wiem"> Nie wiem<br><br>
+       
+        <label for="dyscyplinyWybor">Wybierz swoje ulubione dyscypliny sportu:</label><br>
+        <input type="checkbox" id="dyscyplina1" name="dyscyplinyWybor" value="Piłka ręczna"> Piłka ręczna
+        <input type="checkbox" id="dyscyplina2" name="dyscyplinyWybor" value="Lekkoatletyka">
+        Lekkoatletyka
+        <input type="checkbox" id="dyscyplina3" name="dyscyplinyWybor" value="Koszykówka"> Koszykówka
+        <input type="checkbox" id="dyscyplina4" name="dyscyplinyWybor" value="Siatkówa"> Siatkówka
+        <input type="checkbox" id="dyscyplina5" name="dyscyplinyWybor" value="Tenis"> Tenis<br><br>
+      
+        <input type="text" name="pole1" placeholder="Pole 1"><br>
+        <input type="text" name="pole2" value="Tekst początkowy"><br>
+        <input type="text" name="pole3" maxlength="10" placeholder="Max 10 znaków"><br>
+        <input type="password" name="haslo" placeholder="Hasło"><br>
+        <input type="text" name="pole5" placeholder="Pole 5"><br><br>
+     
+        <label for="lista1">Wybierz swój ulubiony kolor:</label><br>
+        <select id="lista1" name="kolor">
+            <option value="Czerwony">Czerwony</option>
+            <option value="Niebieski">Niebieski</option>
+            <option value="Zielony">Zielony</option>
+            <option value="Żółty">Żółty</option>
+            <option value="Różowy" selected>Różowy (domyślny)</option>
+        </select><br><br>
+
+        <label for="lista2">Wybierz swój ulubiony owoc:</label><br>
+        <select id="lista2" name="owoc">
+            <option value="Jabłko">Jabłko</option>
+            <option value="Banan">Banan</option>
+            <option value="Truskawka">Truskawka</option>
+            <option value="Pomarańcza">Pomarańcza</option>
+        </select><br><br>
+
+        <label for="lista3">Wybierz swój ulubiony film:</label><br>
+        <select id="lista3" name="film">
+            <option value="Komedia">Komedia</option>
+            <option value="Dramat">Dramat</option>
+            <option value="Akcja">Akcja</option>
+            <option value="Romans">Romans</option>
+            <option value="Horror" selected>Horror (domyślny)</option>
+        </select><br><br>
+
+        
+        <input type="submit" value="Wyślij">   <button type="button" onclick="document.querySelector('form').reset()">Czyść</button><br><br>
+    </form>
+
+   
+
+</body>
+</html>
