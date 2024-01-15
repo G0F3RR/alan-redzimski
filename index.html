@@ -3,8 +3,25 @@
 <html>
 <head 
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="sortcut icon" href="https://g0f3rr.github.io/alan-redzimski/mini_logo_redzimski.jpg">
 <title>główny Alan Redzimski</title>
+<script>
+    window.onload = function() {
+        if (localStorage.getItem('visitCount')) {
+            var count = parseInt(localStorage.getItem('visitCount')) + 1;
+            localStorage.setItem('visitCount', count);
+        } else {
+            localStorage.setItem('visitCount', 24);
+        }
+
+        updateCounter();
+    };
+    function updateCounter() {
+        var count = localStorage.getItem('visitCount');
+        document.getElementById('counter').innerHTML = 'Liczba odwiedzeń: ' + count;
+    }
+</script>
 </head>
 <body bgcolor="white">
 <table width=95% border="1" align="center">
@@ -14,14 +31,11 @@
 
     </td>
 </tr>
-<!-- www.DarmowyLicznik.pl-->
-<div class="image-rotator"><div class="rotator-slide" id="rotator-slide-1"><a href="https://www.darmowylicznik.pl/" title="Przejdź na stronę licznika" target="_blank"><img src="https://www.darmowylicznik.pl/licznik.php?id=147005" alt="Darmowy Licznik odwiedzin" style="border:0px;" /></a></div></div>
-<!-- END www.DarmowyLicznik.pl -->
 <tr>
 <td width=18% align="center">
 <p align="center"> <font color="black" size="3" face="Arial"> lewe menu </font> </p> <br>
-  <!-- www.Darmowylicznik.pl -->
-<div class="image-rotator"><div class="rotator-slide" id="rotator-slide-1"><a href="https://www.darmowylicznik.pl" title="Przejdź na stronę licznika" target="obszar_glowny"><img src="https://www.darmowylicznik.pl/licznik.php?id=147003" alt="Darmowy licznik odwiedzin" style="border: 0px;" /></a></div></div> <!-- END www.Darmowylicznik.pl -->
+    <p id="counter">Licznik odwiedzeń: 0</p>
+<br>
 <li>
 <a href="http://www.kuratorium.gda.pl" target="strony">Kuratorium</a>
 </li>
@@ -61,5 +75,8 @@
   </td>
 </tr>
 </table>
+<script>
+    updateCounter();
+</script>
 </body>
 </html>
